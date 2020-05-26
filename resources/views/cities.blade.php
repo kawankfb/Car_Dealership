@@ -13,7 +13,18 @@
 <br>
 </li>
 
+
 @endforeach
 </ul>
+<br>
+<br>
+<br>
 
+<h2>
+JSON format :   
+</h2>
+
+<br>
+<br>
+{{$json_encoded_cities}}
 @endsection

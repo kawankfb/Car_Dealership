@@ -14,6 +14,8 @@ class CreateCompaniesTable extends Migration
     public function up()
     {
         Schema::create('companies', function (Blueprint $table) {
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_persian_ci';
             $table->increments('id');
             $table->string('name');
             $table->timestamps();
