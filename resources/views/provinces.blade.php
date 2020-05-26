@@ -10,7 +10,7 @@
 @foreach($provinces as $province)
 <li>
 <a href="/cities/{{$province->id}}">
-{{$province->id}} : {{$province->name}}
+{{$province->name}} 
 </a>
 <br>
 </li>
