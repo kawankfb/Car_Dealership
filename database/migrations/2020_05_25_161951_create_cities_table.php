@@ -19,7 +19,6 @@ class CreateCitiesTable extends Migration
             $table->increments('id');
             $table->integer('province_id');
             $table->string('name');
-            $table->timestamps();
             $table->foreign('province_id')
             ->references('id')
             ->on('provinces')

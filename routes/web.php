@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::get('/provinces','ProvincesController@jsonProvincesList');
 Route::get('/cities/{province_id}','CitiesController@citiesOfProvinceList');
+Route::get('/uploadfile','ProductUploadController@index');
+Route::post('/uploadfile','ProductUploadController@showUploadFile');

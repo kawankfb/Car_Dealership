@@ -18,7 +18,6 @@ class CreateCompaniesTable extends Migration
             $table->collation = 'utf8_persian_ci';
             $table->increments('id');
             $table->string('name');
-            $table->timestamps();
         });
     }
 

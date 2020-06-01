@@ -27,4 +27,15 @@ JSON format :
 <br>
 <br>
 {{$json_encoded_cities}}
+<br>
+<br>
+<br>
+
+<h2>
+JSON format of products array :   
+</h2>
+
+<br>
+<br>
+{{$json_encoded_products}}
 @endsection

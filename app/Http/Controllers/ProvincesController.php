@@ -22,4 +22,11 @@ class ProvincesController extends Controller
             'provinces' => $provinces
         ]);
     }
+    public function show($province_id){
+        //return provinces::getProvince($province_id);
+        return provinces::getNeighbourProvince($province_id);
+    }
+    public function index(){
+        return provinces::all();
+    }
 }
