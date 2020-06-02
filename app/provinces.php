@@ -11,15 +11,17 @@ class provinces extends Model
     }
     public static function getNeighbourProvince($province_json){
         $province =json_decode($province_json,true);
-        if(isset( $province["id"] ))
-        $id=$province["id"];
+        $prov=DB::table('provinces');
+        if(isset( $province["id"] )){
+            $id=$province["id"];
+            $prov =$prov->where('id', '=', $id);
+        }
         else
-        $id=25;
-        $previousProvince =DB::table('provinces')->where('id', '=', $id-1)->first();
-        $nextProvince =DB::table('provinces')->where('id', '=', $id+1)->first();
+        $prov =$prov->where('id', '=', 20);
+        
+        $previousProvince =$prov->first();
         $neighbours =[
-            'previousNeighbour' => $previousProvince,
-            'nextNeighbour' => $nextProvince
+            'previousNeighbour' => $previousProvince
         ];
         return $neighbours;
     }

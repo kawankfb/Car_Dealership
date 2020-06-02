@@ -17,12 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/products/',function(){
-    $product=[
-        'user_id' => '2',
-        'name' => 'kawan'
-    ];
-    return $product;
-});
+Route::apiResource('/products','ProductController');
 Route::apiResource('/provinces','ProvincesController');
-Route::apiResource('/cities/{province_id}','CitiesController@show');
+Route::apiResource('/cities','CitiesController');

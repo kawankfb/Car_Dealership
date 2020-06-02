@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\Product;
 class ProductController extends Controller
 {
-    public function show(){
-        
+    public function show($json_string){
+       return Product::filterProducts($json_string);
+    }
+    public function index(){
     }
 }
