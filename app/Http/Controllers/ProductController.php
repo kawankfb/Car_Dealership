@@ -10,5 +10,7 @@ class ProductController extends Controller
        return Product::filterProducts($json_string);
     }
     public function index(){
+        return Product::filterProducts("{}");
     }
+
 }
