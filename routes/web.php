@@ -16,8 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/sign', function () {
+    return view('provinces');
+});
 
 Route::get('/provinces','ProvincesController@jsonProvincesList');
+Route::get('/cities/{province_id}','CitiesController@citiesOfProvinceList');
 Route::get('/cities/{province_id}','CitiesController@citiesOfProvinceList');
 Route::get('/uploadfile','ProductUploadController@index');
 Route::post('/uploadfile','ProductUploadController@showUploadFile');

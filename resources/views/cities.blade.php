@@ -5,37 +5,5 @@
 @section('content')
 
 <h1>List of cities</h1>
-
-<ul>
-@foreach($cities as $city)
-<li>
-{{$city->id}} : {{$city->name}}
-<br>
-</li>
-
-
-@endforeach
-</ul>
-<br>
-<br>
-<br>
-
-<h2>
-JSON format :   
-</h2>
-
-<br>
-<br>
-{{$json_encoded_cities}}
-<br>
-<br>
-<br>
-
-<h2>
-JSON format of products array :   
-</h2>
-
-<br>
-<br>
-{{$json_encoded_products}}
+{{$cities}}
 @endsection

@@ -32,10 +32,15 @@ class CreateProductsTable extends Migration
             $table->integer('province');
             $table->integer('city');
             $table->integer('admin_id');
-
+            $table->integer('car_type');
             $table->foreign('admin_id')
             ->references('id')
             ->on('users');
+
+            $table->foreign('car_type')
+            ->references('id')
+            ->on('car_types')
+            ->onDelete('cascade');
 
             $table->foreign('manufacturer')
             ->references('id')

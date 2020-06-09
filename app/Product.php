@@ -79,6 +79,18 @@ class Product extends Model
                     $products=$products->where('damage',$damage);
             }
 
+            //if car_type element is set it will filter the products based on their type (car,truck,...)
+            if(isset($filterArguments["car_type"] ))
+            {
+                $car_type=$filterArguments["car_type"];
+                    if(is_array($car_type) && isIntArray($car_type))
+                        {
+                            $products=$products->whereIn('car_type',$car_type);
+                        }
+                    else if(is_int($car_type))
+                    $products=$products->where('car_type',$car_type);
+            }
+
             //if color element is set it will filter the products accordingly
             if(isset($filterArguments["color"] ))
             {

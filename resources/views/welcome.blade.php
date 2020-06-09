@@ -81,7 +81,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    {{csrf_field()}}
+                    {{csrf_field()}}
                 </div>
 
                 <div class="links">

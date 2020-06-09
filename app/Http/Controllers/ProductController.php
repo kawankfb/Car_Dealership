@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\FilterData;
 use Illuminate\Http\Request;
 use App\Product;
 class ProductController extends Controller
@@ -10,7 +11,8 @@ class ProductController extends Controller
        return Product::filterProducts($json_string);
     }
     public function index(){
-        return Product::filterProducts("{}");
+        //return Product::filterProducts("{}");
+        return FilterData::getFilterData();
     }
 
 }
