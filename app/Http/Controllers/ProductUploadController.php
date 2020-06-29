@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Unchecked_Products;
 use Illuminate\Http\Request;
 
 class ProductUploadController extends Controller
@@ -34,6 +35,9 @@ class ProductUploadController extends Controller
         //Move Uploaded File
         $destinationPath = 'uploaded_images';
         $file->move($destinationPath,$file->getClientOriginalName());
+     }
+     public function insert($jStr){
+        Unchecked_Products::insertProduct($jStr);
      }
     //
 }

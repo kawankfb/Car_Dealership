@@ -33,6 +33,15 @@ class CreateProductsTable extends Migration
             $table->integer('city');
             $table->integer('admin_id');
             $table->integer('car_type');
+            $table->text('img_1')->nullable($value = true);
+            $table->text('img_2')->nullable($value = true);
+            $table->text('img_3')->nullable($value = true);
+            $table->text('img_4')->nullable($value = true);
+            $table->text('img_5')->nullable($value = true);
+            $table->text('img_6')->nullable($value = true);
+            $table->text('img_7')->nullable($value = true);
+            $table->text('img_8')->nullable($value = true);
+
             $table->foreign('admin_id')
             ->references('id')
             ->on('users');

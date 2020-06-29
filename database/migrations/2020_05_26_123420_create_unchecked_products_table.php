@@ -31,7 +31,15 @@ class CreateUncheckedProductsTable extends Migration
             $table->integer('fuel_type');
             $table->integer('province');
             $table->integer('city');
-
+            $table->text('img_1')->nullable($value = true);
+            $table->text('img_2')->nullable($value = true);
+            $table->text('img_3')->nullable($value = true);
+            $table->text('img_4')->nullable($value = true);
+            $table->text('img_5')->nullable($value = true);
+            $table->text('img_6')->nullable($value = true);
+            $table->text('img_7')->nullable($value = true);
+            $table->text('img_8')->nullable($value = true);
+            
             $table->foreign('manufacturer')
             ->references('id')
             ->on('companies')

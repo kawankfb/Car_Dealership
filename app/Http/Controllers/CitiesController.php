@@ -10,12 +10,8 @@ class CitiesController extends Controller
 {
     //
     public function citiesOfProvinceList($province_id){
-        /*$cities =Cities::citiesOfProvince($province_id);
-    return view('cities',[
-        'cities' => $cities
-    ]);*/
-    echo json_encode(FilterData::getFilterData()) ;
-
+        $cities =Cities::citiesOfProvince($province_id);
+    return view('cities')->with('cities', $cities);
 }
     public function show($province_id){
         return Cities::citiesOfProvince($province_id);;

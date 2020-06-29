@@ -4,9 +4,28 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use PHPUnit\Util\Json;
+
 //created by kawan at 2020/05/26
 class Product extends Model
 {
+    protected $fillable = [
+        'price',
+        'title',
+        'explanation',
+        'distance',
+        'damage',
+        'production_date',
+        'color',
+        'manufacturer',
+        'model',
+        'user_id',
+        'fuel_type',
+        'province',
+        'city',
+        'admin_id',
+        'car_type'
+    ];
 
     public static function filterProducts(String $json_string){
         
@@ -219,6 +238,28 @@ class Product extends Model
         
         return $products->limit($ppp)->get();
     }
-    
+    public static function insertProduct($json_string){
+        $product_json=json_decode($json_string,true);
+        $id = DB::table('products')->insertGetId(
+            [
+                'price'             => $product_json["price"],
+                'title'             => $product_json["title"],
+                'explanation'       => $product_json["explanation"],
+                'distance'          => $product_json["distance"],
+                'damage'            => $product_json["damage"],
+                'production_date'   => $product_json["production_date"],
+                'color'             => $product_json["color"],
+                'manufacturer'      => $product_json["manufacturer"],
+                'model'             => $product_json["model"],
+                'user_id'           => $product_json["user_id"],
+                'fuel_type'         => $product_json["fuel_type"],
+                'province'          => $product_json["province"],
+                'city'              => $product_json["city"],
+                'admin_id'          => $product_json["admin_id"],
+                'car_type'          => $product_json["car_type"]
+             ]
+        );
+            return [ 'id' => $id];
+    }
     //
 }
