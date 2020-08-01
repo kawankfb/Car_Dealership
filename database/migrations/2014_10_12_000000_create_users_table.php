@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->collation = 'utf8_persian_ci';
             $table->id();
             $table->string('name');
+            $table->string('last_name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

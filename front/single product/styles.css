@@ -1,0 +1,151 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto' , sans-serif;
+  background-color: #f6f5f7;
+  overflow-x: hidden;
+}
+
+.header-item:hover {
+  background-color: #df2800;
+  border-radius: 5px;
+}
+
+.dropdown .dropdown-menu a:hover{
+  background-color: #ff9f8a !important;
+}
+/* a tag's of category not work so we should change z-index 1 to 0 */
+.carousel-control-next, .carousel-control-prev{
+  z-index: 0 !important;
+}
+/* ------------ HEADER ------------*/
+
+.logo{
+  height: 50px;
+  width: auto;
+}
+
+  /* dropdown category */
+.dropdown .dropdown-category{
+    margin-left:70px ;
+    color: #fff;
+}
+
+.navbar-nav > li{
+  margin-left:20px ;
+  margin-right:20px;
+}
+
+.navbar{
+  z-index:1;
+}
+
+.bg-dark{
+  background-color: #1C1C1C !important;
+}
+/* --------------- */
+.container
+{
+  margin-top: 100px;
+}
+
+.single-product{
+  margin-bottom: 35px;
+}
+
+.w-100{
+    height: 400px!important;
+}
+
+.product-header h2{
+  color: #555;
+  display: inline;
+}
+
+/* favourite button */
+.fav-btn img{
+  margin: 15px;
+  float: right;
+}
+
+/* header details */
+.header-detail ul {
+  margin-top: 20px;
+  padding-left: 0px;
+}
+
+.header-detail ul li{
+  color: #888;
+  margin-left: 0;
+  display: inline-block;
+}
+
+.show-number{
+  background: #d2302c;
+  color: #FFF;
+  font-size: 15px;
+  margin: 10px 20px;
+  display: inline-block;
+}
+
+.show-number:hover{
+  background: #ae0000;
+  color: #fff;
+}
+
+.product-detail{
+  margin-top: 8%;
+}
+
+
+
+/*--------- Footer --------- */
+.footer-div{
+ width: 100%;
+ height: auto;
+ margin: auto;
+ background: #1C1C1C;
+ padding: 20px 0px;
+}
+/* first and second line of footer */
+.footer-menu-one, .footer-menu-two{
+ width: 100%;
+ height: auto;
+ margin: auto;
+}
+
+.footer-menu-one ul,
+.footer-menu-two ul{
+ text-align: center;
+}
+
+.footer-menu-one ul li{
+ display: inline-block;
+ margin: 5px 20px;
+}
+
+.footer-menu-one ul li a,
+.footer-menu-two ul li a,
+.footer-web{
+ color: #aaa;
+ letter-spacing: 1px;
+}
+
+.footer-web{
+   text-align: center;
+   font-size: 14px;
+}
+
+.footer-menu-two ul li{
+ display: inline-block;
+ margin: 5px 3px;
+}
+
+.footer-menu-two ul li a{
+  font-size: 13px;
+  font-weight: 100;
+}
+
+.footer-web:hover{
+  color: #fdfdfd;
+}

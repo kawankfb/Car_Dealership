@@ -1,0 +1,51 @@
+
+   /*--------- Footer --------- */
+.footer-div{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background: #1C1C1C;
+  padding: 20px 0px;
+}
+/* first and second line of footer */
+.footer-menu-one, .footer-menu-two{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.footer-menu-one ul,
+.footer-menu-two ul{
+  text-align: center;
+}
+
+.footer-menu-one ul li{
+  display: inline-block;
+  margin: 5px 20px;
+}
+
+.footer-menu-one ul li a,
+.footer-menu-two ul li a,
+ .footer-web{
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.footer-web{
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-menu-two ul li{
+  display: inline-block;
+  margin: 5px 3px;
+}
+
+ .footer-menu-two ul li a{
+   font-size: 13px;
+   font-weight: 100;
+ }
+
+ .footer-web:hover{
+   color: #fdfdfd;
+ }

@@ -1,0 +1,395 @@
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto' , sans-serif;
+  background-color: #f6f5f7;
+  overflow-x: hidden;
+}
+
+.w-100{
+  height: 595px;
+}
+
+.header-item:hover {
+  background-color: #df2800;
+  border-radius: 5px;
+}
+
+.dropdown .dropdown-menu a:hover{
+  background-color: #ff9f8a !important;
+}
+/* a tag's of category not work so we should change z-index 1 to 0 */
+.carousel-control-next, .carousel-control-prev{
+  z-index: 0 !important;
+}
+/* ------------ HEADER ------------*/
+
+.logo{
+  height: 50px;
+  width: auto;
+}
+
+  /* dropdown category */
+.dropdown .dropdown-category{
+    margin-left:70px ;
+    color: #fff;
+}
+
+.navbar-nav > li{
+  margin-left:20px ;
+  margin-right:20px;
+}
+
+.navbar{
+  z-index:1;
+}
+
+.bg-dark{
+  background-color: #1C1C1C !important;
+}
+
+/* slider */
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+/*--------- filtering section  -------------*/
+.box{
+  background-color: white;
+  color: #333;
+  width: 20%;
+  height:auto;
+  border: 1px solid #CCC;
+  border-radius: 20px;
+  margin: 15px;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.header-of-box{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  text-align: center;
+  margin: 10px auto;
+  padding-top: -10px;
+}
+
+.button{
+  padding: 5px 20px;
+  margin: 15px auto;
+  border: 1px solid #c70000;
+  border-radius: 20px;
+  background-color: #c70000;
+  color: white;
+  font-weight: bold;
+}
+
+
+label{
+  text-align: center;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+select{
+  width: 200px;
+  text-align: center;
+}
+
+.row{
+  width: 200px; !important
+}
+
+.red{
+  width: 20%;
+  height: 20%;
+  background-color: red;
+}
+
+.main-con{
+  position: relative;
+}
+
+
+.all{
+  display: inline-block;
+  position: absolute;
+  width: 23%;
+  margin: 3px;
+  right: 25px;
+}
+
+.box{
+  background-color: white;
+  color: #333;
+  width: 100%;
+  height:auto;
+  border: 1px solid #CCC;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex: 0 0 25%;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.header-of-box{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  text-align: center;
+  margin: 10px auto;
+  padding-top: -10px;
+}
+
+.brand{
+  margin-bottom: 7px;
+}
+
+.brand-img{
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.btn{
+  padding: 5px 20px;
+  margin: 15px auto;
+  border: 1px solid #d2302c;
+  border-radius: 20px;
+  background-color: #d2302c;
+  color: white;
+  font-weight: bold;
+}
+
+.btn:hover{
+  padding: 5px 20px;
+  margin: 15px auto;
+  border: 1px solid #ae0000;
+  border-radius: 20px;
+  background-color: #ae0000;
+  color: white;
+  font-weight: bold;
+}
+
+/*---- container of cards -----*/
+.asli{
+  display: inline-block;
+  width: 74%;
+  margin: 25px 10px;
+}
+
+.cards-container{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+  border-radius: 10px;
+  border: 1px solid #CCC;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.containers{
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+  /* sigle card */
+.cards{
+  position: relative;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 300px;
+  height: 370px;
+  transition: 0.3s ease-out;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
+}
+
+.cards .imgbox{
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.cards .imgbox img{
+  position: absolute;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  display: block;
+  transition: 0.5s;
+}
+/* cards content */
+.cards .content{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  background: #e6e6e6;
+  transition:  0.5s ;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cards:hover .content{
+  width: 100%;
+  height: 50%;
+  left: 0;
+  bottom: 0;
+}
+
+.content p{
+ margin-bottom: 3px;
+ font-size: 15px;
+}
+/* animation of cards */
+.cards .content .details{
+ margin: 10px 0 0;
+ transform: translateY(1em);
+ line-height: 1.3em;
+ transition: 0.3s;
+ text-align: justify;
+ opacity: 0;
+}
+
+.cards:hover .content .details{
+ transform: translateY(0);
+ opacity: 1;
+}
+
+.view-btn{
+ display: block;
+}
+
+.cards:hover{
+ box-shadow: 0 0 2em rgba(0, 0, 0, 0.8 );
+}
+
+/* ------- pagination -------- */
+.page-div{
+  margin: 25px auto -10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages{
+  list-style:none;
+  padding: 0;
+}
+
+.pages li{
+  display: inline-block;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.pages li a{
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: .5em  .75em;
+  margin: 0.2em;
+  background-color: rgba(0,0,0,0);
+  border-radius: 50%;
+  transition: .5s ease;
+}
+
+.pages li a:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pages li a:active{
+  color: #fff;
+  background-color: rgba(231, 76, 68, 1);
+}
+
+.pages li.active a{
+  color: #fff;
+  background-color: rgba(231, 76, 68, 1);
+  box-shadow: 0 1px 5px rgba(0,0,0,.6);
+}
+
+.pages li.disable{
+  opacity: .5;
+  pointer-events: none !important;
+}
+
+   /*--------- Footer --------- */
+.footer-div{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background: #1C1C1C;
+  padding: 20px 0px;
+}
+/* first and second line of footer */
+.footer-menu-one, .footer-menu-two{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.footer-menu-one ul,
+.footer-menu-two ul{
+  text-align: center;
+}
+
+.footer-menu-one ul li{
+  display: inline-block;
+  margin: 5px 20px;
+}
+
+.footer-menu-one ul li a,
+.footer-menu-two ul li a,
+ .footer-web{
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.footer-web{
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-menu-two ul li{
+  display: inline-block;
+  margin: 5px 3px;
+}
+
+ .footer-menu-two ul li a{
+   font-size: 13px;
+   font-weight: 100;
+ }
+
+ .footer-web:hover{
+   color: #fdfdfd;
+ }

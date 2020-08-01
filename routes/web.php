@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AuthController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,13 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('header');
 });
 
-Route::get('/provinces','ProvincesController@jsonProvincesList');
-Route::get('/cities/{province_id}','CitiesController@citiesOfProvinceList');
-Route::get('/cities/{province_id}','CitiesController@citiesOfProvinceList');
-Route::get('/uploadfile','ProductUploadController@index');
-Route::post('/uploadfile','ProductUploadController@showUploadFile');
-Route::get('/upload/{jStr}','ProductUploadController@insert');
-Route::resource('auth','AuthController');
+Auth::routes();
+
+Route::prefix('profile')->middleware('auth')->group(function () {
+    Route::get('/','ProfileController@index')->name('profile');
+    Route::post('/edit','ProfileController@edit')->name('profile.edit');
+});
+
+Route::get('/home', 'HomeController@index')->name('home');

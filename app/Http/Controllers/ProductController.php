@@ -3,13 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\FilterData;
-use App\Http\Resources\ProductResource;
-use App\Http\Resources\ProductResourceCollection;
-use Illuminate\Http\Request;
 use App\Product;
-use Illuminate\Support\Facades\File;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Image;
 
 class ProductController extends Controller
 {
@@ -23,13 +19,13 @@ class ProductController extends Controller
             "errors": {
                 "id":"No such Product exists."}
             }',$status=404);
-       return new ProductResource($product);
+       return $product;
     }
-    public function index():ProductResourceCollection
+    public function index()
     {
         //$products =Product::filterProducts("{}");
         $products =Product::all();
-        return new ProductResourceCollection($products);
+        return $products;
         
         //return FilterData::getFilterData();
     }
@@ -38,8 +34,6 @@ class ProductController extends Controller
     {
         //
     }
-
-    
     /**
      * Store a newly created resource in storage.
      *
@@ -88,69 +82,8 @@ class ProductController extends Controller
                 $product->$imgField=$img_path;
                 $product->save();
                 }
-                else {
-                    $fileNameToStore='default_image.jpg';
-                }
                 $imgNumber++;
         }
-        if($request->hasFile('img_'.$imgNumber)){
-        $extension=$request->file('img_'.$imgNumber)->getClientOriginalExtension();
-        $img_path= $request->file('img_'.$imgNumber)->storeAs($pathToStoreImages,'img_'.$imgNumber.'.'.$extension);
-        $imgField='img_'.$imgNumber;
-        $product->$imgField=$img_path;
-        $product->save();
-        $imgNumber++;
-        }
-        else {
-            $fileNameToStore='default_image.jpg';
-        }
-            return new ProductResource($product);
+            return $product;
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Product $product,Request $request):ProductResource
-    {
-        //
-        $product->update($request->all());
-        return new ProductResource($product);
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Product $product)
-    {
-        //
-        $product->delete();
-        return response()->json();
-
-    }
-
 }

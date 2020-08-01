@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- scrollbar -->
+  <style>
+    /* width */
+    ::-webkit-scrollbar {
+      width: 13px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 5px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 5px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+  <!--  -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+
+<body>
+
+  <!------------- header navbar -------------->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+    <img src="images/logo.png" class="navbar-brand logo" alt="logo">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--------- collapse (responsive the navbar)-------->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link text-right header-item" href="#footer">about</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-right header-item" href="#footer">contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-right header-item" href="#">sign in/up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-right header-item" href="#">advertisment</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link text-right header-item" href="#">home</a>
+        </li>
+      </ul>
+
+      <!-- categories (dropdown menu) -->
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle dropdown-category text-right" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">category</a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item text-right" href="#">car</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item text-right" href="#">bike</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item text-right" href="#">van</a>
+        </div>
+      </div>
+
+    </div>
+    <!-- end of the collapse -->
+  </nav>
+  <!-- end of navbar -->
+
+  <!-------------- (bootstrap)slider section -------------->
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <!-- each item of slider -->
+      <div class="carousel-item active">
+        <img src="images/car-8.jpg" class="d-block w-100" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Silence is not enough</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/car-5.jpg" class="d-block w-100" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Silence and faster</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/car-6.jpg" class="d-block w-100" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>fire and fastest</h5>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/car-7.jpg" class="d-block w-100" alt="">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Silence is not enough</h5>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Previous button of slider -->
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <!-- next button of slider -->
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!----------------------- main container ----------------------->
+
+  <div class="mian-con">
+    <!------ cards section that show cars ------>
+    <div class="asli">
+      <div class="cards-container">
+
+        <div class="containers" style="width: 1000px ;
+        margin: 4em auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;">
+
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car-6.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car2.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car-7.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn  view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car3.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car10.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car-5.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car-6.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car-7.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car-8.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car2.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car3.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+          <!-- single card -->
+          <div class="cards">
+            <div class="imgbox">
+              <img src="images/car10.jpg" alt="car">
+            </div>
+            <div class="content">
+              <h5> White ELX Persia</h5>
+              <p>model : <span id="model">persia</span></p>
+              <p>price : <span id="price">1200 $</span></p>
+              <div class="details">
+                <button class="btn   view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+
+          <!------ PAGINATION ----->
+          <div class="page-div">
+
+            <ul class="pages">
+              <li class="first disable"> <a href="#prev">First</a></li>
+              <li class="prev disable"> <a href="#prev">&laquo;<span class="sr-only"> Previous </span></a></li>
+              <li class="pages-item active"> <a href="#p1">1</a></li>
+              <li class="pages-item"> <a href="#p2">2</a></li>
+              <li class="pages-item"> <a href="#p3">3</a></li>
+              <li class="pages-item"> <a href="#p4">4</a></li>
+              <li class="next"> <a href="#prev">&raquo;<span class="sr-only">Next </span></a></li>
+              <li class="last"> <a href="#prev">Last</a></li>
+            </ul>
+
+          </div>
+          <!-- End paginantion part -->
+        </div>
+      </div>
+      <!-- end of cards container -->
+    </div>
+
+
+    <!--------- filtering part --------->
+    <div class="all">
+      <div class="box">
+        <!-- filtering box title -->
+        <div class="header-of-box">
+          <h3>Primary filters</h3>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <select class="" name="provinces">
+            <option value="">choose your province</option>
+          </select>
+        </div>
+        <br>
+        <div class="row">
+          <select class="" name="cities">
+            <option value="">choose your city</option>
+          </select>
+        </div>
+
+        <br>
+        <label for="">Production year range: </label>
+        <div class="row">
+          <select class="" name="">
+            <option value="">from this year</option>
+          </select>
+        </div>
+        <br>
+        <div class="row">
+          <select class="" name="">
+            <option value=""> to this year</option>
+          </select>
+        </div>
+        <br>
+
+        <label for="">price range: </label>
+        <div class="row">
+          <select class="col" name="">
+            <option value="">From</option>
+          </select>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <select class="col" name="">
+            <option value="">&nbsp;To&nbsp;</option>
+          </select>
+        </div>
+
+        <br>
+        <div class="row">
+          <select class="col" name="">
+            <option value="">Color</option>
+          </select>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <select class="col" name="">
+            <option value="">Fuel&nbsp;</option>
+          </select>
+        </div>
+        <br>
+        <button class="btn" type="submit" name="button">Filter</button>
+      </div>
+      <!------- second filtering box  -------->
+      <div class="box">
+
+        <div class="header-of-box">
+          <h3>Brand</h3>
+        </div>
+
+        <div class="row brand">
+          <div class="col chkbox">
+            <input type="checkbox" name="">
+          </div>
+          <img class="brand-img" src="https://img.icons8.com/windows/32/000000/tesla-logo.png" /> Tesla
+        </div>
+        <div class="row brand">
+          <div class="col chkbox">
+            <input type="checkbox" name="">
+          </div>
+          <img class="brand-img" src="https://img.icons8.com/ios-glyphs/32/000000/bmw.png" /> BMW
+        </div>
+        <div class="row brand">
+          <div class="col chkbox">
+            <input type="checkbox" name="">
+          </div>
+          <img class="brand-img" src="https://img.icons8.com/windows/32/000000/ferrari-land.png" /> Ferrari
+        </div>
+        <div class="row brand">
+          <div class="col chkbox">
+            <input type="checkbox" name="">
+          </div>
+          <img class="brand-img" src="https://img.icons8.com/color/48/000000/porsche.png" /> Porsche
+        </div>
+        <div class="row brand">
+          <div class="col chkbox">
+            <input type="checkbox" name="">
+          </div>
+          <img class="brand-img" src="https://img.icons8.com/color/48/000000/lamborghini.png" /> Lamborghini
+        </div>
+        <div class="row brand">
+          <div class="col chkbox">
+            <input type="checkbox" name="">
+          </div>
+          <img class="brand-img" src="https://img.icons8.com/color/48/000000/toyota.png" /> Toyota
+        </div>
+        <div class="row brand">
+          <div class="col chkbox">
+            <input type="checkbox" name="">
+          </div>
+
+          <img class="brand-img" src="https://img.icons8.com/ios/48/000000/volkswagen--v2.png" /> Volkswagon
+        </div>
+
+        <button class="btn" type="submit" name="button">Filter</button>
+      </div>
+
+    </div>
+    <!-- end of filtering section -->
+
+  </div>
+  <!-- end of main container -->
+
+
+  <!------------ Footer ------------>
+  <div id="footer" class="footer-div">
+
+    <!-- first line of footer section -->
+    <div class="footer-menu-one">
+      <!---- social media in footer part ------>
+      <ul>
+        <li> <a href="#">
+            <ion-icon class="footer-web" name="logo-github" style="width: 20px; height: 20px;"></ion-icon>
+          </a> </li>
+        <li> <a href="#">
+            <ion-icon class="footer-web" name="logo-linkedin" style="width: 20px; height: 20px;"></ion-icon>
+          </a> </li>
+        <li> <a href="#">
+            <ion-icon class="footer-web" name="mail-outline" style="width: 20px; height: 20px;"></ion-icon>
+          </a> </li>
+      </ul>
+    </div>
+    <!-- second line of footer section -->
+    <div class="footer-menu-two">
+      <ul>
+        <li> <a href="#">Terms of Use </a> </li>
+        <li> <a href="#">Privacy</a> </li>
+      </ul>
+    </div>
+
+    <!-- Copyright -->
+    <p class="footer-web">© 2020 Copyright Blazed team</p>
+    <!-- Copyright -->
+
+  </div>
+  <!------------ End of Footer ------------>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+</body>
+
+<script>
+  $(".pages .pages-item a").not(".disable a").on("click", function() {
+    if (!$(this).parent().hasClass("active")) {
+      $(".pages .pages-item.active").removeClass("active");
+      $(this).parent().addClass("active");
+    }
+  });
+</script>
+
+
+
+</html>
