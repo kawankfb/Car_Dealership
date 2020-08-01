@@ -9,6 +9,22 @@ use PHPUnit\Framework\Constraint\IsJson;
 
 class Unchecked_Products extends Model
 {
+    protected $fillable = [
+        'price',
+        'title',
+        'explanation',
+        'distance',
+        'damage',
+        'production_date',
+        'color',
+        'manufacturer',
+        'model',
+        'user_id',
+        'fuel_type',
+        'province',
+        'city',
+        'car_type'
+    ];
     //
     public static function insertProduct($json_string){
             $product_json=json_decode($json_string,true);

@@ -19,7 +19,9 @@ class CreateColorsTable extends Migration
             $table->increments('id');
             $table->string('name');
         });
+
     }
+    
 
     /**
      * Reverse the migrations.

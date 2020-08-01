@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use Image;
 
 class ProductController extends Controller
 {
@@ -38,6 +39,7 @@ class ProductController extends Controller
         //
     }
 
+    
     /**
      * Store a newly created resource in storage.
      *
